@@ -61,17 +61,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity1.cs" />
+    <Compile Include="Blackjack\UI\BlackjackAnimatedDealerHandComponent.cs" />
+    <Compile Include="Blackjack\UI\BlackjackAnimatedPlayerHandComponent.cs" />
+    <Compile Include="Blackjack\Rules\BlackJackRule.cs" />
+    <Compile Include="Blackjack\Rules\BlackjackGameEventArgs.cs" />
+    <Compile Include="Blackjack\Misc\BetGameComponent.cs" />
+    <Compile Include="Blackjack\UI\BlackJackTable.cs" />
+    <Compile Include="Blackjack\Rules\BustRule.cs" />
+    <Compile Include="Blackjack\Rules\InsuranceRule.cs" />
+    <Compile Include="Blackjack\UI\Button.cs" />
+    <Compile Include="Misc\AudioManager.cs" />
+    <Compile Include="Misc\InputHelper.cs" />
+    <Compile Include="Screens\PauseScreen.cs" />
     <Compile Include="ScreenManager\MenuEntry.cs" />
     <Compile Include="ScreenManager\MenuScreen.cs" />
     <Compile Include="ScreenManager\PlayerIndexEventArgs.cs" />
     <Compile Include="Screens\BackgroundScreen.cs" />
     <Compile Include="BlackjackGame.cs" />
+    <Compile Include="Blackjack\Game\BlackjackCardGame.cs" />
+    <Compile Include="Blackjack\Players\BlackjackPlayer.cs" />
+    <Compile Include="Blackjack\Players\BlackjackAIPlayer.cs" />
+    <Compile Include="Screens\GameplayScreen.cs" />
+    <Compile Include="Screens\InstructionScreen.cs" />
     <Compile Include="Screens\MainMenuScreen.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScreenManager\GameScreen.cs" />
     <Compile Include="ScreenManager\InputState.cs" />
     <Compile Include="ScreenManager\ScreenManager.cs" />
+    <Compile Include="Screens\OptionsMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

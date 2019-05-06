@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
 
-namespace BlackJackCard
+namespace GameStateManagement
 {
     class PlayerIndexEventArgs : EventArgs
     {

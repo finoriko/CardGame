@@ -12,7 +12,7 @@ using Android.Widget;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace BlackJackCard
+namespace GameStateManagement
 {
     abstract class MenuScreen : GameScreen
     {

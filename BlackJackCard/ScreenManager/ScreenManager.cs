@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
 using System.IO;
 using System.IO.IsolatedStorage;
-namespace BlackJackCard
+namespace GameStateManagement
 {
     public class ScreenManager : DrawableGameComponent
     {

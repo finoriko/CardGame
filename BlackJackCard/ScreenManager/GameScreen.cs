@@ -2,7 +2,7 @@
 using System;
 using System.IO;
 
-namespace BlackJackCard
+namespace GameStateManagement
 {
     /// </summary>
     public enum ScreenState
