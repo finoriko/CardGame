@@ -1,6 +1,9 @@
+using BlackJackCard.Misc;
+using GameStateManagement;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace BlackJackCard
 {
@@ -25,6 +28,17 @@ namespace BlackJackCard
             screenManager.AddScreen(new BackgroundScreen(), null);
             screenManager.AddScreen(new MainMenuScreen(), null);
             graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
+            Components.Add(screenManager);
+#if WINDOWS
+            IsMouseVisible = true;l
+#elif ANDROID
+            TargetElapsedTime = TimeSpan.FromTicks(333333);
+            graphics.IsFullScreen = true;
+
+#else
+            Coponents.Add(new GameServiceComponent(this));
+#endif
+            AudioManager.Initialize(this);
         }
 
         /// <summary>
@@ -38,6 +52,16 @@ namespace BlackJackCard
             // TODO: Add your initialization logic here
 
             base.Initialize();
+#if XBOX
+
+#elif WINDOWS
+            
+#endif
+            graphics.ApplyChanges();
+
+            Rectangle bounds = graphics.GraphicsDevice.Viewport.TitleSafeArea;
+            HeightScale = bounds.Height / 480f;
+            WidthScale = bounds.Width / 800f;
         }
 
         /// <summary>
@@ -47,8 +71,8 @@ namespace BlackJackCard
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            //spriteBatch = new SpriteBatch(GraphicsDevice);
+            AudioManager.LoadSounds();
             // TODO: use this.Content to load your game content here
         }
 

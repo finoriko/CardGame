@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
+using System.Collections.Generic;
 
 namespace GameStateManagement
 {
@@ -23,7 +25,7 @@ namespace GameStateManagement
 
         public readonly bool[] GamePadWasConnected;
 
-#if WINDOWS_PHONE
+#if ANDROID
         public TouchCollection TouchState;
 
         public readonly List<GestureSample> Gestures = new List<GestureSample>();
@@ -74,7 +76,7 @@ namespace GameStateManagement
                     GamePadWasConnected[i] = true;
                 }
             }
-#if WINDOWS_PHONE
+#if ANDROID
             TouchState = TouchPanel.GetState();
 
             Gestures.Clear();

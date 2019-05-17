@@ -9,6 +9,12 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using CardFramework;
+using GameStateManagement;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
 
 namespace BlackJackCard
 {
@@ -60,7 +66,7 @@ namespace BlackJackCard
         /// </summary>
         public override void Initialize()
         {
-#if WINDOWS_PHONE
+#if ANDROID
             // Enable tab gesture
             TouchPanel.EnabledGestures = GestureType.Tap;
 #endif
@@ -126,7 +132,7 @@ namespace BlackJackCard
             bool pressed = false;
             Vector2 position = Vector2.Zero;
 
-#if WINDOWS_PHONE
+#if ANDROID
             if ((input.Gestures.Count > 0) && input.Gestures[0].GestureType == GestureType.Tap)
             {
                 pressed = true;
@@ -171,7 +177,7 @@ namespace BlackJackCard
                     if (IntersectWith(position))
                     {
                         isPressed = true;
-#if WINDOWS_PHONE
+#if ANDROID
                         FireClick();
                         isPressed = false;
 #endif

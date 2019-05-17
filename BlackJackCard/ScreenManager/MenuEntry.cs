@@ -86,7 +86,7 @@ namespace GameStateManagement
         {
             // there is no such thing as a selected item on Windows Phone, so we always
             // force isSelected to be false
-#if WINDOWS_PHONE
+#if ANDROID
             isSelected = false;
 #endif
 
@@ -110,7 +110,7 @@ namespace GameStateManagement
             Color textColor = isSelected ? Color.White : Color.Black;
             Color tintColor = isSelected ? Color.White : Color.Gray;
 
-#if WINDOWS_PHONE
+#if ANDROID
             // there is no such thing as a selected item on Windows Phone, so we always
             // force isSelected to be false
 

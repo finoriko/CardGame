@@ -12,6 +12,8 @@ using Android.Widget;
 using GameStateManagement;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
 
 namespace BlackJackCard
 {
@@ -34,7 +36,7 @@ namespace BlackJackCard
             TransitionOffTime = TimeSpan.FromSeconds(0.5);
 
             this.theme = theme;
-#if WINDOWS_PHONE
+#if ANDROID
             EnabledGestures = GestureType.Tap;
 #endif
         }
@@ -63,26 +65,11 @@ namespace BlackJackCard
         {
             if (!isExit)
             {
-#if WINDOWS_PHONE
                 if (ScreenManager.input.Gestures.Count > 0 &&
                     ScreenManager.input.Gestures[0].GestureType == GestureType.Tap)
                 {
                     isExit = true;
                 }
-#else
-
-                PlayerIndex result;
-                if (mouseState.LeftButton == ButtonState.Pressed)
-                {
-                    isExit = true;
-                }
-                else if (ScreenManager.input.IsNewButtonPress(Buttons.A, null, out result) ||
-                    ScreenManager.input.IsNewButtonPress(Buttons.Start, null, out result))
-                {
-                    isExit = true;
-                }
-#endif
-
             }
         }
 

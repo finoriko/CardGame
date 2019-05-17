@@ -1,5 +1,7 @@
-﻿using GameStateManagement;
+﻿using CardFramework;
+using GameStateManagement;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input.Touch;
 using System;
 using System.Collections.Generic;
 
@@ -33,7 +35,7 @@ namespace BlackJackCard
         {
             TransitionOnTime = TimeSpan.FromSeconds(0.0);
             TransitionOffTime = TimeSpan.FromSeconds(0.5);
-#if WINDOWS_PHONE
+#if ANDROID
             EnabledGestures = GestureType.Tap;
 #endif
             this.theme = theme;

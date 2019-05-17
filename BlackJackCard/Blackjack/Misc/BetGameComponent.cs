@@ -9,10 +9,13 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using BlackJackCard.Misc;
 using CardFramework;
 using GameStateManagement;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
 
 namespace BlackJackCard
 {
@@ -72,7 +75,7 @@ namespace BlackJackCard
         /// </summary>
         public override void Initialize()
         {
-#if WINDOWS_PHONE
+#if ANDROID
             // Enable tap gesture
             TouchPanel.EnabledGestures = GestureType.Tap;
 #endif
@@ -250,32 +253,13 @@ namespace BlackJackCard
                 isPressed = true;
                 position = inputHelper.PointPosition;
             }
-#if WINDOWS_PHONE
             else if ((input.Gestures.Count > 0) && input.Gestures[0].GestureType == GestureType.Tap)
             {
                 isPressed = true;
                 position = input.Gestures[0].Position;
             }
-#endif
 
-            if (isPressed)
-            {
-                if (!isKeyDown)
-                {
-                    int chipValue = GetIntersectingChipValue(position);
-                    if (chipValue != 0)
-                    {
-                        AddChip(GetCurrentPlayer(), chipValue, false);
-                    }
-                    isKeyDown = true;
-                }
-            }
-            else
-            {
-                isKeyDown = false;
-            }
         }
-
         /// <summary>
         /// Get which chip intersects with a given position.
         /// </summary>

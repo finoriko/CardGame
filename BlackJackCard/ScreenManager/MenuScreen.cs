@@ -11,6 +11,8 @@ using Android.Views;
 using Android.Widget;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
 
 namespace GameStateManagement
 {
@@ -53,7 +55,7 @@ namespace GameStateManagement
         /// </summary>
         public MenuScreen(string menuTitle)
         {
-#if WINDOWS_PHONE
+#if ANDROID
             // menus generally only need Tap for menu selection
             EnabledGestures = GestureType.Tap;
 #endif
@@ -178,7 +180,7 @@ namespace GameStateManagement
             else if (input.IsNewButtonPress(Buttons.A, ControllingPlayer, out player))
                 OnSelectEntry(selectedEntry, player);
 
-#elif WINDOWS_PHONE
+#elif ANDROID
             // look for any taps that occurred and select any entries that were tapped
             foreach (GestureSample gesture in input.Gestures)
             {

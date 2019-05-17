@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using BlackJackCard.Misc;
 using CardFramework;
 using GameStateManagement;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace BlackJackCard
 {
@@ -44,7 +46,7 @@ namespace BlackJackCard
             new Vector2(100 * BlackjackGame.WidthScale, 25 * BlackjackGame.HeightScale);
         static Vector2 ringOffset = new Vector2(0, 110);
 
-#if WINDOWS_PHONE
+#if ANDROID
         Vector2 frameSize = new Vector2(162, 162);
 #else
         Vector2 frameSize = new Vector2(180, 180);

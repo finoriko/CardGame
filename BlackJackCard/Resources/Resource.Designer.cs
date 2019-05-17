@@ -26,6 +26,8 @@ namespace BlackJackCard
 		
 		public static void UpdateIdValues()
 		{
+			global::CardFramework.Resource.String.app_name = global::BlackJackCard.Resource.String.app_name;
+			global::CardFramework.Resource.String.hello = global::BlackJackCard.Resource.String.hello;
 		}
 		
 		public partial class Attribute
@@ -63,11 +65,17 @@ namespace BlackJackCard
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f030003
+			public const int ApplicationName = 2130903043;
+			
+			// aapt resource value: 0x7f030002
+			public const int Hello = 2130903042;
+			
 			// aapt resource value: 0x7f030001
-			public const int ApplicationName = 2130903041;
+			public const int app_name = 2130903041;
 			
 			// aapt resource value: 0x7f030000
-			public const int Hello = 2130903040;
+			public const int hello = 2130903040;
 			
 			static String()
 			{

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input.Touch;
 using System;
 using System.IO;
 
@@ -165,7 +166,7 @@ namespace GameStateManagement
 
         PlayerIndex? controllingPlayer;
 
-#if WINDOWS_PHONE
+#if ANDROID
         /// <summary>
         /// Gets the gestures the screen is interested in. Screens should be as specific
         /// as possible with gestures to increase the accuracy of the gesture engine.
