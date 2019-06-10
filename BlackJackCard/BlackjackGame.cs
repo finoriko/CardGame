@@ -52,11 +52,7 @@ namespace BlackJackCard
             // TODO: Add your initialization logic here
 
             base.Initialize();
-#if XBOX
 
-#elif WINDOWS
-            
-#endif
             graphics.ApplyChanges();
 
             Rectangle bounds = graphics.GraphicsDevice.Viewport.TitleSafeArea;

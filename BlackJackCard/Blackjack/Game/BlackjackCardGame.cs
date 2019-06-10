@@ -21,10 +21,8 @@ namespace BlackJackCard
     class BlackjackCardGame : CardsGame
     {
         #region Fields and Properties
-        Dictionary<Player, string> playerHandValueTexts =
-            new Dictionary<Player, string>();
-        Dictionary<Player, string> playerSecondHandValueTexts =
-            new Dictionary<Player, string>();
+        Dictionary<Player, string> playerHandValueTexts =new Dictionary<Player, string>();
+        Dictionary<Player, string> playerSecondHandValueTexts =new Dictionary<Player, string>();
         private Hand deadCards = new Hand(); // stores used cards
         private BlackjackPlayer dealerPlayer;
         bool[] turnFinishedByPlayer;
@@ -258,7 +256,7 @@ namespace BlackJackCard
             Game.Components.Add(animationComponent);
 
             animationComponent.AddAnimation(
-                new FramesetGameComponentAnimation(cardsAssets["shuffle_" + Theme], 32, 11, frameSize)
+                new FramesetGameComponentAnimation(cardsAssets["Shuffle_" + Theme], 32, 11, frameSize)
                 {
                     Duration = TimeSpan.FromSeconds(1.5f),
                     PerformBeforeStart = ShowComponent,

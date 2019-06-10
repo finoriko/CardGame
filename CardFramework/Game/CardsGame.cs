@@ -177,6 +177,8 @@ namespace CardFramework
         /// <param name="assetName">The name of the asset.</param>
         public void LoadUITexture(string folder, string assetName)
         {
+            var cardstring = folder;
+            var assetNametemp = assetName;
             cardsAssets.Add(assetName,
                 Game.Content.Load<Texture2D>(string.Format(@"Images\{0}\{1}",
                 folder, assetName)));
