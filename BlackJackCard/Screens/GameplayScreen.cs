@@ -61,7 +61,7 @@ namespace BlackJackCard
 #endif
 
             blackJackGame = new BlackjackCardGame(ScreenManager.GraphicsDevice.Viewport.Bounds,
-                new Vector2(safeArea.Left + safeArea.Width / 2 - 50, safeArea.Top + 20),
+                new Vector2(safeArea.Left + safeArea.Width / 2 - 50, safeArea.Top + 120),//본래 20
                 GetPlayerCardPosition, ScreenManager, theme);
 
 

@@ -56,9 +56,11 @@ namespace BlackJackCard
         {
             ScreenManager.SpriteBatch.Begin();
 
+            Vector2 temp = new Vector2(0, 0);
             ScreenManager.SpriteBatch.Draw(background, ScreenManager.GraphicsDevice.Viewport.Bounds,
                 Color.White * TransitionAlpha);
-
+            //ScreenManager.SpriteBatch.Draw(background, temp,
+            // Color.White * TransitionAlpha);
             ScreenManager.SpriteBatch.End();
 
             base.Draw(gameTime);

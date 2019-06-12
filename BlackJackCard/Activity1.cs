@@ -5,9 +5,9 @@ using Android.Views;
 
 namespace BlackJackCard
 {
-    [Activity(Label = "BlackJackCard"
+    [Activity(Label = "BlackJack"
         , MainLauncher = true
-        , Icon = "@drawable/icon"
+        , Icon = "@drawable/blackjack"
         , Theme = "@style/Theme.Splash"
         , AlwaysRetainTaskState = true
         , LaunchMode = Android.Content.PM.LaunchMode.SingleInstance

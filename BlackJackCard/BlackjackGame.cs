@@ -34,7 +34,8 @@ namespace BlackJackCard
 #elif ANDROID
             TargetElapsedTime = TimeSpan.FromTicks(333333);
             graphics.IsFullScreen = true;
-
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 480;
 #else
             Coponents.Add(new GameServiceComponent(this));
 #endif
@@ -58,6 +59,8 @@ namespace BlackJackCard
             Rectangle bounds = graphics.GraphicsDevice.Viewport.TitleSafeArea;
             HeightScale = bounds.Height / 480f;
             WidthScale = bounds.Width / 800f;
+            //HeightScale = 480;
+            //WidthScale = 800;
         }
 
         /// <summary>
